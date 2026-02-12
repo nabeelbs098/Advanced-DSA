@@ -15,7 +15,7 @@ int main()
 {
     Student s1;
     s1.id = 1;
-    s1.name = "Alice";
+    s1.name = "Nabeel";
     s1.display();
 
     Student* ptr = &s1;
