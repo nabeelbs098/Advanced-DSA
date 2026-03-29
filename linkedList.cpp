@@ -5,12 +5,12 @@ class Node
     public:
         int data;
         Node* next;
-        Node(value)
+        Node(int value)
         {
             data=value;
             next=NULL;
         }
-}
+};
 class linkedList
 {
     private:
@@ -120,6 +120,11 @@ class linkedList
         }
         void display()
         {
+            if(head == NULL)
+            {
+                cout<<"List is empty"<<endl;
+                return;
+            }
             Node* temp=head;
             while(temp!=NULL)
             {
@@ -128,7 +133,7 @@ class linkedList
             }
             cout<<endl;
         }
-}
+};
 int main()
 {
     linkedList list;
@@ -177,6 +182,9 @@ int main()
                 break;
             case 7:
                 list.display();
+                break;
+            case 8:
+                cout<<"Exiting...."<<endl;
                 break;
             default:
                 cout<<"Invalid choice"<<endl;
