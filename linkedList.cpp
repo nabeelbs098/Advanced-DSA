@@ -128,10 +128,10 @@ class linkedList
             Node* temp=head;
             while(temp!=NULL)
             {
-                cout<<temp->data<<" ";
+                cout<<temp->data<<"->";
                 temp=temp->next;
             }
-            cout<<endl;
+            cout<<"NULL"<<endl;
         }
 };
 int main()
