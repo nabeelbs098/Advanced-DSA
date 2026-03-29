@@ -1,27 +1,22 @@
 #include <iostream>
-#include <string>
 using namespace std;
-class Student
+class base
 {public:
-    int id;
-    string name;
-    void display()
+    int* add(int* n1,int* n2)
     {
-        cout << "ID: " << id << endl;
-        cout << "Name: " << name << endl;
+      int *ptr=new int(*n1+*n2);
+      return ptr;
     }
 };
 int main()
 {
-    Student s1;
-    s1.id = 1;
-    s1.name = "Nabeel";
-    s1.display();
-
-    Student* ptr = &s1;
-    cout << "Using pointer to access members:" << endl;
-    cout << "ID: " << ptr->id << endl;
-    cout << "Name: " << ptr->name << endl;
-
-    return 0;
+  int *n1=new int(5),*n2=new int(10);
+  base b1;
+    
+  int* sum=b1.add(n1,n2);
+  cout << "sum = " << *sum << endl;
+  delete sum;
+  delete n1;
+  delete n2;
+  return 0;
 }
